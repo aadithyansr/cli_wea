@@ -23,13 +23,13 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Weather App',
           theme: ThemeData(
-            appBarTheme:
-                AppBarTheme(backgroundColor: Colors.transparent, elevation: 0),
-            iconTheme: IconThemeData(color: Colors.white),
+            appBarTheme: const AppBarTheme(
+                backgroundColor: Colors.transparent, elevation: 0),
+            iconTheme: const IconThemeData(color: Colors.white),
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: HomePage()),
+          home: const HomePage()),
     );
   }
 }

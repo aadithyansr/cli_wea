@@ -40,9 +40,6 @@ class _HomePageState extends State<HomePage> {
     final locationProvider = Provider.of<LocationProvider>(context);
 
     final weatherProvider = Provider.of<WeatherServiceProvider>(context);
-// Inside the build method of your _HomePageState class
-
-    0; // Replace 0 with a default timestamp if needed
 
     return Scaffold(
         backgroundColor: Color.fromARGB(255, 206, 146, 146),
@@ -65,6 +62,7 @@ class _HomePageState extends State<HomePage> {
                 height: 50,
                 child: Consumer<LocationProvider>(
                     builder: (context, LocationProvider, child) {
+                  final weatherGrab = weatherProvider.weather?.main;
                   var locationCity;
                   if (locationProvider.currentLocationName != null) {
                     locationCity =
